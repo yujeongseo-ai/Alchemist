@@ -1,0 +1,12 @@
+2026-11-19 06:43:40,293 fail2ban.filter         [17324]: INFO    [sshd] Found 10.10.50.80 - 2026-11-19 06:43:40
+2026-11-19 06:43:40,393 fail2ban.filter         [17324]: INFO    [sshd] Found 10.10.50.80 - 2026-11-19 06:43:40
+2026-11-19 06:43:43,106 fail2ban.filter         [17324]: INFO    [sshd] Found 10.10.50.80 - 2026-11-19 06:43:43
+2026-11-19 06:43:43,482 fail2ban.actions        [17324]: NOTICE  [sshd] Ban 10.10.50.80
+2026-11-19 06:44:19,941 fail2ban.actions        [17324]: NOTICE  [sshd] Unban 10.10.50.80
+2026-11-19 06:44:25,129 fail2ban.filter         [17324]: INFO    [sshd] Found 10.10.50.80 - 2026-11-19 06:44:25
+2026-11-19 06:44:25,135 fail2ban.filter         [17324]: INFO    [sshd] Found 10.10.50.80 - 2026-11-19 06:44:25
+2026-11-19 06:44:25,147 fail2ban.filter         [17324]: INFO    [sshd] Found 10.10.50.80 - 2026-11-19 06:44:25
+2026-11-19 06:44:25,148 fail2ban.filter         [17324]: INFO    [sshd] Found 10.10.50.80 - 2026-11-19 06:44:25
+2026-11-19 06:44:25,148 fail2ban.filter         [17324]: INFO    [sshd] Found 10.10.50.80 - 2026-11-19 06:44:25
+2026-11-19 06:44:25,149 fail2ban.filter         [17324]: INFO    [sshd] Found 10.10.50.80 - 2026-11-19 06:44:25
+2026-11-19 06:44:25,546 fail2ban.actions        [17324]: NOTICE  [sshd] Ban 10.10.50.80

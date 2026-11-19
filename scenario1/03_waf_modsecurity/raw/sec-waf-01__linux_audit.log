@@ -1,0 +1,6 @@
+type=SYSCALL msg=audit(1795065925.282:36998): arch=c000003e syscall=59 success=yes exit=0 a0=5570cd939980 a1=5570cd9d59d0 a2=5570cd9399c0 a3=8 items=2 ppid=917 pid=28353 auid=4294967295 uid=0 gid=0 euid=0 suid=0 fsuid=0 egid=0 sgid=0 fsgid=0 tty=(none) ses=4294967295 comm="sshd" exe="/usr/sbin/sshd" subj=unconfined key="phantom_exec"
+type=EXECVE msg=audit(1795065925.282:36998): argc=3 a0="/usr/sbin/sshd" a1="-D" a2="-R"
+type=CWD msg=audit(1795065925.282:36998): cwd="/"
+type=PATH msg=audit(1795065925.282:36998): item=0 name="/usr/sbin/sshd" inode=3969003 dev=fd:00 mode=0100755 ouid=0 ogid=0 rdev=00:00 nametype=NORMAL cap_fp=0 cap_fi=0 cap_fe=0 cap_fver=0 cap_frootid=0
+type=PATH msg=audit(1795065925.282:36998): item=1 name="/lib64/ld-linux-x86-64.so.2" inode=3935339 dev=fd:00 mode=0100755 ouid=0 ogid=0 rdev=00:00 nametype=NORMAL cap_fp=0 cap_fi=0 cap_fe=0 cap_fver=0 cap_frootid=0
+type=PROCTITLE msg=audit(1795065925.282:36998): proctitle=2F7573722F7362696E2F73736864002D44002D52

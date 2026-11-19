@@ -1,0 +1,31 @@
+type=SYSCALL msg=audit(1795067017.370:37340): arch=c000003e syscall=59 success=yes exit=0 a0=5570cd939980 a1=5570cd9d59d0 a2=5570cd9399c0 a3=8 items=2 ppid=917 pid=28571 auid=4294967295 uid=0 gid=0 euid=0 suid=0 fsuid=0 egid=0 sgid=0 fsgid=0 tty=(none) ses=4294967295 comm="sshd" exe="/usr/sbin/sshd" subj=unconfined key="phantom_exec"
+type=EXECVE msg=audit(1795067017.370:37340): argc=3 a0="/usr/sbin/sshd" a1="-D" a2="-R"
+type=CWD msg=audit(1795067017.370:37340): cwd="/"
+type=PATH msg=audit(1795067017.370:37340): item=0 name="/usr/sbin/sshd" inode=3969003 dev=fd:00 mode=0100755 ouid=0 ogid=0 rdev=00:00 nametype=NORMAL cap_fp=0 cap_fi=0 cap_fe=0 cap_fver=0 cap_frootid=0
+type=PATH msg=audit(1795067017.370:37340): item=1 name="/lib64/ld-linux-x86-64.so.2" inode=3935339 dev=fd:00 mode=0100755 ouid=0 ogid=0 rdev=00:00 nametype=NORMAL cap_fp=0 cap_fi=0 cap_fe=0 cap_fver=0 cap_frootid=0
+type=PROCTITLE msg=audit(1795067017.370:37340): proctitle=2F7573722F7362696E2F73736864002D44002D52
+type=USER_LOGIN msg=audit(1795067017.438:37341): pid=28571 uid=0 auid=4294967295 ses=4294967295 subj=unconfined msg='op=login acct=28756E6B6E6F776E207573657229 exe="/usr/sbin/sshd" hostname=? addr=10.10.1.100 terminal=sshd res=failed'
+type=USER_LOGIN msg=audit(1795067017.438:37342): pid=28571 uid=0 auid=4294967295 ses=4294967295 subj=unconfined msg='op=login acct=28696E76616C6964207573657229 exe="/usr/sbin/sshd" hostname=? addr=10.10.1.100 terminal=sshd res=failed'
+type=USER_AUTH msg=audit(1795067017.446:37343): pid=28571 uid=0 auid=4294967295 ses=4294967295 subj=unconfined msg='op=PAM:authentication grantors=? acct="user1" exe="/usr/sbin/sshd" hostname=10.10.1.100 addr=10.10.1.100 terminal=ssh res=failed'
+type=USER_LOGIN msg=audit(1795067018.786:37344): pid=28571 uid=0 auid=4294967295 ses=4294967295 subj=unconfined msg='op=login acct=28696E76616C6964207573657229 exe="/usr/sbin/sshd" hostname=? addr=10.10.1.100 terminal=sshd res=failed'
+type=USER_ACCT msg=audit(1795067101.714:37345): pid=28573 uid=0 auid=4294967295 ses=4294967295 subj=unconfined msg='op=PAM:accounting grantors=pam_permit acct="root" exe="/usr/sbin/cron" hostname=? addr=? terminal=cron res=success'
+type=CRED_ACQ msg=audit(1795067101.718:37346): pid=28573 uid=0 auid=4294967295 ses=4294967295 subj=unconfined msg='op=PAM:setcred grantors=pam_permit,pam_cap acct="root" exe="/usr/sbin/cron" hostname=? addr=? terminal=cron res=success'
+type=LOGIN msg=audit(1795067101.718:37347): pid=28573 uid=0 subj=unconfined old-auid=4294967295 auid=0 tty=(none) old-ses=4294967295 ses=2621 res=1
+type=SYSCALL msg=audit(1795067101.718:37347): arch=c000003e syscall=1 success=yes exit=1 a0=7 a1=7ffcbd37ebe0 a2=1 a3=0 items=0 ppid=877 pid=28573 auid=0 uid=0 gid=0 euid=0 suid=0 fsuid=0 egid=0 sgid=0 fsgid=0 tty=(none) ses=2621 comm="cron" exe="/usr/sbin/cron" subj=unconfined key=(null)
+type=PROCTITLE msg=audit(1795067101.718:37347): proctitle=2F7573722F7362696E2F43524F4E002D66002D50
+type=USER_START msg=audit(1795067101.718:37348): pid=28573 uid=0 auid=0 ses=2621 subj=unconfined msg='op=PAM:session_open grantors=pam_loginuid,pam_env,pam_env,pam_permit,pam_umask,pam_unix,pam_limits acct="root" exe="/usr/sbin/cron" hostname=? addr=? terminal=cron res=success'
+type=SYSCALL msg=audit(1795067101.718:37349): arch=c000003e syscall=59 success=yes exit=0 a0=55639ace6c06 a1=7ffcbd37ec60 a2=55639acea5f0 a3=28 items=2 ppid=28573 pid=28574 auid=0 uid=0 gid=0 euid=0 suid=0 fsuid=0 egid=0 sgid=0 fsgid=0 tty=(none) ses=2621 comm="sh" exe="/usr/bin/dash" subj=unconfined key="phantom_exec"
+type=EXECVE msg=audit(1795067101.718:37349): argc=3 a0="/bin/sh" a1="-c" a2=636F6D6D616E64202D762064656269616E2D736131203E202F6465762F6E756C6C2026262064656269616E2D73613120312031
+type=CWD msg=audit(1795067101.718:37349): cwd="/root"
+type=PATH msg=audit(1795067101.718:37349): item=0 name="/bin/sh" inode=3932746 dev=fd:00 mode=0100755 ouid=0 ogid=0 rdev=00:00 nametype=NORMAL cap_fp=0 cap_fi=0 cap_fe=0 cap_fver=0 cap_frootid=0
+type=PATH msg=audit(1795067101.718:37349): item=1 name="/lib64/ld-linux-x86-64.so.2" inode=3935339 dev=fd:00 mode=0100755 ouid=0 ogid=0 rdev=00:00 nametype=NORMAL cap_fp=0 cap_fi=0 cap_fe=0 cap_fver=0 cap_frootid=0
+type=PROCTITLE msg=audit(1795067101.718:37349): proctitle=2F62696E2F7368002D6300636F6D6D616E64202D762064656269616E2D736131203E202F6465762F6E756C6C2026262064656269616E2D73613120312031
+type=SYSCALL msg=audit(1795067101.718:37350): arch=c000003e syscall=59 success=yes exit=0 a0=55a05271e538 a1=55a05271e4e0 a2=55a05271e500 a3=8 items=3 ppid=28574 pid=28575 auid=0 uid=0 gid=0 euid=0 suid=0 fsuid=0 egid=0 sgid=0 fsgid=0 tty=(none) ses=2621 comm="debian-sa1" exe="/usr/bin/dash" subj=unconfined key="phantom_exec"
+type=EXECVE msg=audit(1795067101.718:37350): argc=4 a0="/bin/sh" a1="/usr/lib/sysstat/debian-sa1" a2="1" a3="1"
+type=CWD msg=audit(1795067101.718:37350): cwd="/root"
+type=PATH msg=audit(1795067101.718:37350): item=0 name="/usr/lib/sysstat/debian-sa1" inode=265365 dev=fd:00 mode=0100755 ouid=0 ogid=0 rdev=00:00 nametype=NORMAL cap_fp=0 cap_fi=0 cap_fe=0 cap_fver=0 cap_frootid=0
+type=PATH msg=audit(1795067101.718:37350): item=1 name="/bin/sh" inode=3932746 dev=fd:00 mode=0100755 ouid=0 ogid=0 rdev=00:00 nametype=NORMAL cap_fp=0 cap_fi=0 cap_fe=0 cap_fver=0 cap_frootid=0
+type=PATH msg=audit(1795067101.718:37350): item=2 name="/lib64/ld-linux-x86-64.so.2" inode=3935339 dev=fd:00 mode=0100755 ouid=0 ogid=0 rdev=00:00 nametype=NORMAL cap_fp=0 cap_fi=0 cap_fe=0 cap_fver=0 cap_frootid=0
+type=PROCTITLE msg=audit(1795067101.718:37350): proctitle=2F62696E2F7368002F7573722F6C69622F737973737461742F64656269616E2D73613100310031
+type=CRED_DISP msg=audit(1795067101.718:37351): pid=28573 uid=0 auid=0 ses=2621 subj=unconfined msg='op=PAM:setcred grantors=pam_permit acct="root" exe="/usr/sbin/cron" hostname=? addr=? terminal=cron res=success'
+type=USER_END msg=audit(1795067101.718:37352): pid=28573 uid=0 auid=0 ses=2621 subj=unconfined msg='op=PAM:session_close grantors=pam_loginuid,pam_env,pam_env,pam_permit,pam_umask,pam_unix,pam_limits acct="root" exe="/usr/sbin/cron" hostname=? addr=? terminal=cron res=success'

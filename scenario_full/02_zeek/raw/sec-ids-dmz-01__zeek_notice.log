@@ -1,0 +1,2 @@
+{"ts":1794824147.722681,"uid":"CziZSy1J947SGh8oB1","note":"HTTP::SQL_Injection_Attacker","msg":"An SQL injection attacker was discovered!","src":"10.10.1.100","dst":"10.10.10.40","actions":["Notice::ACTION_LOG"],"email_dest":[],"suppress_for":3600.0}
+{"ts":1794824147.722681,"uid":"C83aYl46p67arhDCBc","note":"HTTP::SQL_Injection_Victim","msg":"An SQL injection victim was discovered!","src":"10.10.1.100","dst":"10.10.10.40","actions":["Notice::ACTION_LOG"],"email_dest":[],"suppress_for":3600.0}

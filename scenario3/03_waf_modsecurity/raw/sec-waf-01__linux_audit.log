@@ -1,0 +1,21 @@
+type=USER_ACCT msg=audit(1795070701.790:37774): pid=28838 uid=0 auid=4294967295 ses=4294967295 subj=unconfined msg='op=PAM:accounting grantors=pam_permit acct="root" exe="/usr/sbin/cron" hostname=? addr=? terminal=cron res=success'
+type=CRED_ACQ msg=audit(1795070701.790:37775): pid=28838 uid=0 auid=4294967295 ses=4294967295 subj=unconfined msg='op=PAM:setcred grantors=pam_permit,pam_cap acct="root" exe="/usr/sbin/cron" hostname=? addr=? terminal=cron res=success'
+type=LOGIN msg=audit(1795070701.790:37776): pid=28838 uid=0 subj=unconfined old-auid=4294967295 auid=0 tty=(none) old-ses=4294967295 ses=2633 res=1
+type=SYSCALL msg=audit(1795070701.790:37776): arch=c000003e syscall=1 success=yes exit=1 a0=7 a1=7ffcbd37ebe0 a2=1 a3=0 items=0 ppid=877 pid=28838 auid=0 uid=0 gid=0 euid=0 suid=0 fsuid=0 egid=0 sgid=0 fsgid=0 tty=(none) ses=2633 comm="cron" exe="/usr/sbin/cron" subj=unconfined key=(null)
+type=PROCTITLE msg=audit(1795070701.790:37776): proctitle=2F7573722F7362696E2F43524F4E002D66002D50
+type=USER_START msg=audit(1795070701.790:37777): pid=28838 uid=0 auid=0 ses=2633 subj=unconfined msg='op=PAM:session_open grantors=pam_loginuid,pam_env,pam_env,pam_permit,pam_umask,pam_unix,pam_limits acct="root" exe="/usr/sbin/cron" hostname=? addr=? terminal=cron res=success'
+type=SYSCALL msg=audit(1795070701.790:37778): arch=c000003e syscall=59 success=yes exit=0 a0=55639ace6c06 a1=7ffcbd37ec60 a2=55639acea5f0 a3=28 items=2 ppid=28838 pid=28839 auid=0 uid=0 gid=0 euid=0 suid=0 fsuid=0 egid=0 sgid=0 fsgid=0 tty=(none) ses=2633 comm="sh" exe="/usr/bin/dash" subj=unconfined key="phantom_exec"
+type=EXECVE msg=audit(1795070701.790:37778): argc=3 a0="/bin/sh" a1="-c" a2=636F6D6D616E64202D762064656269616E2D736131203E202F6465762F6E756C6C2026262064656269616E2D73613120312031
+type=CWD msg=audit(1795070701.790:37778): cwd="/root"
+type=PATH msg=audit(1795070701.790:37778): item=0 name="/bin/sh" inode=3932746 dev=fd:00 mode=0100755 ouid=0 ogid=0 rdev=00:00 nametype=NORMAL cap_fp=0 cap_fi=0 cap_fe=0 cap_fver=0 cap_frootid=0
+type=PATH msg=audit(1795070701.790:37778): item=1 name="/lib64/ld-linux-x86-64.so.2" inode=3935339 dev=fd:00 mode=0100755 ouid=0 ogid=0 rdev=00:00 nametype=NORMAL cap_fp=0 cap_fi=0 cap_fe=0 cap_fver=0 cap_frootid=0
+type=PROCTITLE msg=audit(1795070701.790:37778): proctitle=2F62696E2F7368002D6300636F6D6D616E64202D762064656269616E2D736131203E202F6465762F6E756C6C2026262064656269616E2D73613120312031
+type=SYSCALL msg=audit(1795070701.790:37779): arch=c000003e syscall=59 success=yes exit=0 a0=5634f05a6538 a1=5634f05a64e0 a2=5634f05a6500 a3=8 items=3 ppid=28839 pid=28840 auid=0 uid=0 gid=0 euid=0 suid=0 fsuid=0 egid=0 sgid=0 fsgid=0 tty=(none) ses=2633 comm="debian-sa1" exe="/usr/bin/dash" subj=unconfined key="phantom_exec"
+type=EXECVE msg=audit(1795070701.790:37779): argc=4 a0="/bin/sh" a1="/usr/lib/sysstat/debian-sa1" a2="1" a3="1"
+type=CWD msg=audit(1795070701.790:37779): cwd="/root"
+type=PATH msg=audit(1795070701.790:37779): item=0 name="/usr/lib/sysstat/debian-sa1" inode=265365 dev=fd:00 mode=0100755 ouid=0 ogid=0 rdev=00:00 nametype=NORMAL cap_fp=0 cap_fi=0 cap_fe=0 cap_fver=0 cap_frootid=0
+type=PATH msg=audit(1795070701.790:37779): item=1 name="/bin/sh" inode=3932746 dev=fd:00 mode=0100755 ouid=0 ogid=0 rdev=00:00 nametype=NORMAL cap_fp=0 cap_fi=0 cap_fe=0 cap_fver=0 cap_frootid=0
+type=PATH msg=audit(1795070701.790:37779): item=2 name="/lib64/ld-linux-x86-64.so.2" inode=3935339 dev=fd:00 mode=0100755 ouid=0 ogid=0 rdev=00:00 nametype=NORMAL cap_fp=0 cap_fi=0 cap_fe=0 cap_fver=0 cap_frootid=0
+type=PROCTITLE msg=audit(1795070701.790:37779): proctitle=2F62696E2F7368002F7573722F6C69622F737973737461742F64656269616E2D73613100310031
+type=CRED_DISP msg=audit(1795070701.790:37780): pid=28838 uid=0 auid=0 ses=2633 subj=unconfined msg='op=PAM:setcred grantors=pam_permit acct="root" exe="/usr/sbin/cron" hostname=? addr=? terminal=cron res=success'
+type=USER_END msg=audit(1795070701.790:37781): pid=28838 uid=0 auid=0 ses=2633 subj=unconfined msg='op=PAM:session_close grantors=pam_loginuid,pam_env,pam_env,pam_permit,pam_umask,pam_unix,pam_limits acct="root" exe="/usr/sbin/cron" hostname=? addr=? terminal=cron res=success'
